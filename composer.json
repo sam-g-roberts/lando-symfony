@@ -45,8 +45,8 @@
         },
         "post-install-cmd": [
             "@auto-scripts",
-            "npm install",
-            "npm run encore dev"
+            "yarn install",
+            "yarn build"
         ],
         "post-update-cmd": [
             "@auto-scripts"
