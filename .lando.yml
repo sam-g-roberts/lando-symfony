@@ -7,12 +7,21 @@ services:
   appserver:
     config:
       vhosts: nginx.conf
+  theme:
+    type: node
+    services:
+      ports:
+        - 3000:3000
 
 tooling:
   sf:
     service: appserver
     description: Run Symfony commands
     cmd: bin/console
+  yarn:
+    service: theme
+
+
 
 events:
   post-start:
